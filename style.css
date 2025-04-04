@@ -10,3 +10,21 @@ a{
 ul, ol, li{
     list-style: none;
 }
+body{
+    padding: 0 80px;
+}
+header{
+    position: fixed;
+    width: calc(100% - 160px);
+    height: 60px;
+    background-color: tomato;
+    top: 60px;
+}
+main{
+    height: 700px;
+    background-color: aqua;
+}
+footer{
+    height: 1526px;
+    background-color: pink;
+}
