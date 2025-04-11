@@ -1,48 +1,60 @@
-:root{
+:root {
     --primary-color: #F07807;
     --secundary-color: #F7E5D8;
+    --default-padding: 0 80px;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-ul, ol, li{
+
+ul,
+ol,
+li {
     list-style: none;
 }
-body{
-    padding: 0 80px;
+
+body {
     font-family: "Poppins", sans-serif;
     background-color: var(--secundary-color);
 }
-header{
+
+header {
     position: fixed;
-    width: calc(100% - 160px);
+    width: 100%;
     height: 60px;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--default-padding);
 }
-header menu{
+
+header menu {
     display: flex;
     align-items: center;
     gap: 48px;
 }
-header li{
+
+header li {
     transition: .5s;
     padding: 4px 8px;
 }
-header li:hover{
+
+header li:hover {
     background-color: var(--secundary-color);
     box-shadow: 0 4px 8px #0005;
 }
-header button{
+
+header button {
     width: 120px;
     height: 48px;
     border-radius: 12px;
@@ -56,12 +68,133 @@ header button{
     color: var(--primary-color);
     font-size: 16px;
     font-weight: 600;
+    font-family: inherit;
 }
-main{
-    height: 700px;
-    /*background-color: aqua;*/
+
+section {
+    height: 100vh;
+    padding: var(--default-padding);
 }
-footer{
+
+.home {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-image: url(./img/bg-home.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+}
+
+.container-top {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    justify-content: center;
+    gap: 64px;
+
+}
+
+.container-top h2 {
+    position: relative;
+    bottom: 80px;
+    font-size: 4rem;
+    font-weight: 500;
+    font-style: italic;
+    width: 568px;
+}
+
+.container-top span {
+    color: var(--primary-color)
+}
+
+.container-pizzas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pizza {
+    display: grid;
+    box-shadow: 0 4px 8px #0005;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-pizza {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    display: grid;
+    place-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    color: white;
+    border-radius: 12px;
+    border: 4px solid white;
+    opacity: 0;
+    transition: .6s;
+}
+
+.pizza:hover .add-pizza {
+    opacity: 1;
+}
+.overflow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.container-info {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+    bottom: -36px;
+    height: 36px;
+    width: 100%;
+    background-color: #0008;
+    border-radius: 0 0 8px 8px;
+    transition: 0.8s;
+    
+}
+.pizza:hover .container-info{
+    bottom: 0;
+    
+}
+.container-info p {
+    font-size: 10px;
+    width: 102px;
+    color: white;
+
+}
+
+.container-info span {
+    display: grid;
+    place-content: center;
+    border-radius: 4px;
+    color: white;
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+
+}
+
+.cardapio {
+    background-color: purple;
+}
+
+.servicos {
+    background-color: gold;
+}
+
+footer {
     height: 1526px;
-    /*background-color: pink;*/
+    background-color: pink;
 }
