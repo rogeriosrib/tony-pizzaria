@@ -35,6 +35,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: var(--default-padding);
+    background-color: #fff7;
+    z-index: 999;
 }
 
 header menu {
