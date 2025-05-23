@@ -5,10 +5,9 @@
 }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-
 }
 
 a {
@@ -29,8 +28,8 @@ body {
 
 header {
     position: fixed;
-    width: 100%;
     height: 60px;
+    width: 100%;
     top: 60px;
     display: flex;
     justify-content: space-between;
@@ -45,28 +44,27 @@ header menu {
 }
 
 header li {
-    transition: .5s;
     padding: 4px 8px;
+    transition: 0.5s;
 }
 
 header li:hover {
     background-color: var(--secundary-color);
-    box-shadow: 0 4px 8px #0005;
+    box-shadow: 0 4px 4px black;
 }
 
 header button {
-    width: 120px;
     height: 48px;
+    width: 120px;
     border-radius: 12px;
     border: none;
-    box-shadow: 0 4px 8px #0005;
+    box-shadow: 0 4px 8px black;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     background-color: var(--secundary-color);
     color: var(--primary-color);
-    font-size: 16px;
     font-weight: 600;
     font-family: inherit;
 }
@@ -87,11 +85,9 @@ section {
 
 .container-top {
     display: flex;
-    grid-template-columns: 1fr 1fr;
-    align-items: end;
     justify-content: center;
+    align-items: end;
     gap: 64px;
-
 }
 
 .container-top h2 {
@@ -104,21 +100,20 @@ section {
 }
 
 .container-top span {
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
-.container-pizzas {
+.container-produtos {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.pizza {
-    display: grid;
-    box-shadow: 0 4px 8px #0005;
-    border-radius: 12px;
+.produto {
     position: relative;
-    overflow: hidden;
+    display: grid;
+    box-shadow: 0 4px 8px black;
+    border-radius: 12px;
 }
 
 .add-pizza {
@@ -138,10 +133,29 @@ section {
     transition: .6s;
 }
 
-.pizza:hover .add-pizza {
+.produto:hover .add-pizza {
     opacity: 1;
 }
-.overflow{
+
+.container-info {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    bottom: -36px;
+    height: 36px;
+    width: 100%;
+    background-color: #0008;
+    border-radius: 0 0 8px 8px;
+    transition: 0.6s;
+}
+
+.produto:hover .container-info {
+    bottom: 0px;
+}
+
+.overflow {
     position: absolute;
     top: 0;
     left: 0;
@@ -149,52 +163,206 @@ section {
     bottom: 0;
     overflow: hidden;
 }
-.container-info {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
-    align-items: center;
-    bottom: -36px;
-    height: 36px;
-    width: 100%;
-    background-color: #0008;
-    border-radius: 0 0 8px 8px;
-    transition: 0.8s;
-    
-}
-.pizza:hover .container-info{
-    bottom: 0;
-    
-}
+
 .container-info p {
     font-size: 10px;
+    font-weight: 400;
     width: 102px;
     color: white;
-
 }
 
 .container-info span {
     display: grid;
     place-content: center;
-    border-radius: 4px;
-    color: white;
     width: 57px;
     height: 20px;
     background-color: var(--primary-color);
-    font-size: 12px;
-
+    font-size: 10px;
+    color: white;
+    border-radius: 4px;
 }
 
 .cardapio {
-    background-color: purple;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cardapio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--primary-color);
+    height: 260px;
+}
+
+.section-title {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.cardapio-item:last-child {
+    border: none;
+}
+
+.section-title h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.item-texto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-texto h4,
+.item-texto a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.bebida {
+    box-shadow: none;
+    transition: 0.5s;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bebida p {
+    width: 100%;
+}
+
+.bebida .preco {
+    color: var(--primary-color);
+}
+
+.bebida .descricao {
+    font-size: 0.6rem;
+}
+
+.bebida:hover {
+    box-shadow: 0 4px 8px black;
 }
 
 .servicos {
-    background-color: gold;
+    background-color: var(--secundary-color);
+    height: auto;
+    padding-block: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicos-item {
+    width: 400px;
+    height: 500px;
+    border: 4px solid var(--primary-color);
+    border-radius: 24px;
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.servicos-item img {
+    filter: drop-shadow(4px 4px 4px #0005);
+}
+
+.servicos-item h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-shadow: 4px 4px 4px #0005;
+}
+
+.servicos-item p {
+    text-align: center;
+    text-shadow: 4px 4px 4px #0005;
 }
 
 footer {
-    height: 1526px;
-    background-color: pink;
+    height: 526px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    flex-grow: 1;
+}
+
+.nav-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 16px;
+}
+
+.nav-item logo {
+    justify-content: center;
+    padding-top: 0;
+}
+
+.nav-item h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-item menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nav-item li {
+    display: flex;
+    gap: 12px;
+    width: 200px;
+}
+
+.social a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    transition: 0.6s;
+}
+
+.social a:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.copy-right {
+    height: 72px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: italic;
+    border-top: 2px solid var(--secundary-color);
 }
