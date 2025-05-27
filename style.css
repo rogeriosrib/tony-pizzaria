@@ -511,6 +511,11 @@ footer nav {
         height: 192px;
         font-size: 32px;
     }
+    .container-top span {
+        width: 85px;
+        height: 44px;
+        background-color: var(--secundary-color);
+    }
 
     .home .container-top .span {
         background-color: var(--secundary-color);
