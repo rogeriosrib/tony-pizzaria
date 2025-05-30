@@ -540,17 +540,43 @@ footer nav {
     .overflow:nth-child(3),
     .overflow:nth-child(4) {
         display: none;
-
-
     }
 
     .servicos-container .servicos-item p {
         display: none;
     }
+    .nav-item{
+        display: flex;
+    }
 
-    contato{
+    footer nav{
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 587px;
+        width: 319px;
+        height: 587px;
     }
+
+    contato .img{
+        width: 140px;
+        height: 57px;
+    }
+    
+    .social{
+        width: 276px;
+        height: 48px;
+
+    }
+    .social menu{
+        flex-direction: row;
+    }
+    
+    .copy-right{
+        align-items: center;
+        justify-content: center;
+        width: 292px;
+        height: 80px;
+    }
+
 }
