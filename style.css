@@ -488,6 +488,7 @@ footer nav {
     header {
         width: 296px;
         height: 60px;
+        gap: 40px;
     }
 
     .home {
@@ -503,10 +504,12 @@ footer nav {
     }
 
     .home .container-top img {
-        opacity: 0%;
+        height: 568px;
+        opacity: 10%;
     }
 
     .home .container-top h2 {
+        color: var(--secundary-color);
         width: 287px;
         height: 192px;
         font-size: 32px;
